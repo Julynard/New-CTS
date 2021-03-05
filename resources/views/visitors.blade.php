@@ -26,23 +26,25 @@
         </div>
         {{-- <small class="text-danger"><b>Location: Main Gate</b></small>
         <input type="hidden" name="txtLocation" value="main_gate"> --}}
-        <form action="{{ route('register') }}" method="post">
+        <form action="{{ route('reg_vist') }}" method="post">
             @csrf
             <div class="form-group">
-                <label for="txtTypeOfUsr">Type of User:</label>
-                <select name="txtTypeOfUsr" id="txtTypeOfUsr" class="form-control" onchange="showId(this.value)" required>
-                    <option value="" selected>Please Select Type of User</option>
-                    <option value="student">STUDENT</option>
-                    <option value="employee">EMPLOYEE</option>
+                <label for="txtLocation">Location:</label>
+                <select name="txtLocation" id="txtLocation" class="form-control" required>
+                    <option value="" selected>Please Select Location</option>
+                    <option value="elem">ELEMENTARY BUILDING</option>
+                    <option value="jhs">JUNIOR HIGH SCHOOL BUILDING</option>
+                    <option value="shs">SENIOR HIGH SCHOOL BUILDING</option>
+                    <option value="col">COLLEGE BUILDING</option>
+                    <option value="admin">ADMIN BUILDING</option>
+                    <option value="clinic">UNIVERSITY CLINIC</option>
+                    <option value="gso">GENERAL SERVICES OFFICE</option>
+                    <option value="po">PURCHASING OFFICE</option>
                 </select>
             </div>
-            <div class="form-group" style="display: none;" id="txtStudNum">
-                <label for="txtStudNum">Student Number:</label>
-                <input type="text" pattern="[0-9]{8,13}" title="Only numbers are allowed, atleast 8 digits and less than 13 digits!" id="studNum" name="txtStudNum" class="form-control" placeholder="Enter Student Number">
-            </div>
-            <div class="form-group" style="display: none;" id="txtEmpNum">
-                <label for="txtEmpNum">Employee Number:</label>
-                <input type="text" pattern="[a-zA-Z0-9_-]{3,11}" title="Only numbers, letters and - are allowed, atleast 3 digits and less than 12 digits!" id="empNum" name="txtEmpNum" class="form-control" placeholder="Enter Employee Number">
+            <div class="form-group" id="txtVistNum">
+                <label for="txtVistNum">Visitors I.D. Number:</label>
+                <input type="text" pattern="[0-9]{3,4}" title="Only numbers are allowed, atleast 3 digits and less than 4 digits!" id="txtVistNum" name="txtVistNum" class="form-control" placeholder="Enter Visitors ID Number">
             </div>
             <div class="form-group">
                 <label for="txtFname">First Name:</label>
@@ -70,6 +72,10 @@
                     <option value="VI">VI</option>
                     <option value="VII">VII</option>
                 </select>
+            </div>
+            <div class="form-group" id="txtContact">
+                <label for="txtContact">Contact Number:</label>
+                <input type="text" pattern="[0-9]{8,11}" title="Only numbers are allowed, atleast 8 digits, and less than 11 digits!" id="txtContact" name="txtContact" class="form-control" placeholder="Enter Contact Number">
             </div>
             <div class="form-group">
                 <label for="txtGender">Gender:</label>

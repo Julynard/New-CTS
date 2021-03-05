@@ -15,11 +15,11 @@ class CreateEmpsTable extends Migration
     {
         Schema::create('emps', function (Blueprint $table) {
             $table->id();
-            $table->integer('empNum');
+            $table->string('empNum');
             $table->string('fname');
-            $table->string('mname');
+            $table->string('mname')->nullable();
             $table->string('lname');
-            $table->string('xname');
+            $table->string('xname')->nullable();
             $table->string('gender');
             $table->date('dob');
             $table->string('province');
@@ -28,14 +28,14 @@ class CreateEmpsTable extends Migration
             $table->string('frombrgy');
             $table->integer('temp');
             $table->string('sanitize');
-            $table->string('cough');
-            $table->string('colds');
-            $table->string('fever');
-            $table->string('sorethroat');
-            $table->string('diffbreath');
+            $table->string('cough')->nullable();
+            $table->string('colds')->nullable();
+            $table->string('fever')->nullable();
+            $table->string('sorethroat')->nullable();
+            $table->string('diffbreath')->nullable();
             $table->string('travelhis');
-            $table->date('travelhisdate');
-            $table->string('travelhisplace');
+            $table->date('travelhisdate')->nullable();
+            $table->string('travelhisplace')->nullable();
             $table->string('closecontact');
             $table->string('email');
             $table->timestamps();

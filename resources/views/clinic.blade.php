@@ -42,7 +42,7 @@
             </div>
             <div class="form-group" style="display: none;" id="txtEmpNum">
                 <label for="txtEmpNum">Employee Number:</label>
-                <input type="text" pattern="[0-9]{3,11}" title="Only numbers are allowed, atleast 3 digits and less than 12 digits!" name="txtEmpNum" class="form-control" placeholder="Enter Employee Number">
+                <input type="text" pattern="[a-zA-Z0-9_-]{3,11}" title="Only numbers, letters and - are allowed, atleast 3 digits and less than 12 digits!" name="txtEmpNum" class="form-control" placeholder="Enter Employee Number">
             </div>
             <div class="form-group" style="display: none;" id="temp">
                 <label for="txtTemp">Enter Your Temperature:</label>

@@ -38,7 +38,7 @@
             </div>
             <div class="form-group" style="display: none;" id="txtStudNum">
                 <label for="txtStudNum">Student Number:</label>
-                <input type="text" pattern="[0-9]{8,13}" title="Only numbers are allowed, atleast 8 digits and less than 13 digits!" name="txtStudNum" class="form-control" placeholder="Enter Student Number">
+                <input type="text" pattern="[a-zA-Z0-9_-]{3,11}" title="Only numbers, letters and - are allowed, atleast 3 digits and less than 12 digits!" name="txtStudNum" class="form-control" placeholder="Enter Student Number">
             </div>
             <div class="form-group" style="display: none;" id="txtEmpNum">
                 <label for="txtEmpNum">Employee Number:</label>

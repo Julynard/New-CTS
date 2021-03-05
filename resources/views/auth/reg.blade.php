@@ -8,7 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
-    <title>Login</title>
+    <title>Register</title>
 </head>
 <style>
 
@@ -77,8 +77,8 @@
                         <a href="#!" class="forgot-password-link">Forgot password?</a>
                         <p class="login-card-footer-text">Already have an account? <a href="{{ route('adm.login') }}" class="text-reset">Login here</a></p>
                         <nav class="login-card-footer-nav">
-                            <a href="#!">Terms of use.</a>
-                            <a href="#!">Privacy policy</a>
+                            <a href="https://manila.pcu.edu.ph/pcu-privacy-policy/" target="_blank">Terms of use.</a>
+                            <a href="https://manila.pcu.edu.ph/pcu-privacy-policy/" target="_blank">Privacy policy</a>
                         </nav>
                     </center>
                 </div>

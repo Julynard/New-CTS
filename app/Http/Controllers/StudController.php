@@ -223,12 +223,20 @@ class StudController extends Controller
         }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    public function search(Request $request)
+    {
+       
+        $search = $request->get('search');
+        $student = DB::table('logs')
+            ->where('usersId','like','%'.$search.'%')
+            ->orWhere('loc','like','%'.$search.'%')
+            ->orWhere('created_at','like','%'.$search.'%')
+            ->orWhere('temp','like','%'.$search.'%')
+            ->paginate(5);
+        return view('admin.dashboard', ['logs'=> $student]);
+
+    }
+
     public function show($id)
     {
         //

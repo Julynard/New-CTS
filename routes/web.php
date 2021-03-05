@@ -55,10 +55,23 @@ Route::post('/maingate', [StudController::class, 'logs'])->name('maingate');
 
 Route::post('student/fetch', 'StudController@fetch')->name('student.fetch');
 
-Route::get('login', [UserAuthController::class, 'login'])->name('adm.login');
-Route::get('reg', [UserAuthController::class, 'reg'])->name('adm.register');
+// Route::get('0zyKuv2GaQM', [UserAuthController::class, 'login'])->name('adm.login');
+// Route::get('$2y$10$KHV8', [UserAuthController::class, 'reg'])->name('adm.register');
+
+Route::get('enPH920PH920', [UserAuthController::class, 'login'])->name('adm.login');
+Route::get('029HP029HPne', [UserAuthController::class, 'reg'])->name('adm.register');
 
 Route::post('create', [UserAuthController::class, 'create'])->name('auth.create');
 Route::post('check', [UserAuthController::class, 'check'])->name('auth.check');
 
-Route::get('dashboard', [UserAuthController::class, 'dashboard'])->name('admin.dashboard');
+Route::get('dashboard', [UserAuthController::class, 'dashboard'])->middleware('isLogged')->name('admin.dashboard');
+Route::get('dashboardv', [UserAuthController::class, 'dashboardv'])->middleware('isLogged')->name('admin.dashboardv');
+Route::get('logout', [UserAuthController::class, 'logout'])->name('logout');
+
+Route::get('visitors', [UserAuthController::class, 'visitors'])->name('visitors');
+Route::post('visitors', [UserAuthController::class, 'RegVist'])->name('reg_vist');
+
+Route::get('/stud-search',[StudController::class,'search'])->name('stud.search');
+Route::get('/visitors-search',[UserAuthController::class,'search'])->name('visitors.search');
+
+
